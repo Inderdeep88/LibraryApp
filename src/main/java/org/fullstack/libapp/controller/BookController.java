@@ -26,6 +26,18 @@ public class BookController {
     return bookService.checkoutBook(userEmail, bookId);
   }
 
+  @PutMapping("/secure/return")
+  public void returnBook (@RequestParam Long bookId) throws Exception{
+    String userEmail = "test@test.com";
+    bookService.returnBook(userEmail, bookId);
+  }
+
+  @PutMapping("/secure/renew/loan")
+  public void renewLoan (@RequestParam Long bookId) throws Exception{
+    String userEmail = "test@test.com";
+    bookService.renewLoan(userEmail, bookId);
+  }
+
   @GetMapping("/secure/ischeckedout/byuser")
   public Boolean checkoutBookByUser(@RequestParam Long bookId){
     String userEmail = "test@test.com";
