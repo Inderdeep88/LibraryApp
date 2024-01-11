@@ -1,5 +1,6 @@
 package org.fullstack.libapp.controller;
 
+import org.fullstack.libapp.entity.Book;
 import org.fullstack.libapp.entity.Message;
 import org.fullstack.libapp.requestmodels.AddBookRequest;
 import org.fullstack.libapp.requestmodels.AdminQuestionRequest;
@@ -25,8 +26,8 @@ public class AdminController {
   }
 
   @PostMapping("/secure/add/book")
-  public void addBook (@RequestBody AddBookRequest addBookRequest) throws Exception{
-    adminService.postBook(addBookRequest);
+  public Book addBook (@RequestBody AddBookRequest addBookRequest) throws Exception{
+    return adminService.postBook(addBookRequest);
   }
 
   @PutMapping("/secure/remove/book")

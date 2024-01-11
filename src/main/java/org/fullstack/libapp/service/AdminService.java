@@ -31,7 +31,7 @@ public class AdminService {
     this.reviewRepository = reviewRepository;
   }
 
-  public void postBook(AddBookRequest adminBookRequest){
+  public Book postBook(AddBookRequest adminBookRequest){
     Book book = new Book();
 
     book.setTitle(adminBookRequest.getTitle());
@@ -42,7 +42,7 @@ public class AdminService {
     book.setCategory(adminBookRequest.getCategory());
     book.setImg(adminBookRequest.getImg());
 
-    bookRepository.save(book);
+    return bookRepository.save(book);
   }
 
   public void increaseBookQty(Long bookId) throws Exception {

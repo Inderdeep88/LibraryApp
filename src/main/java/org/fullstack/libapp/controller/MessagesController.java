@@ -31,11 +31,13 @@ public class MessagesController {
     messageService.postMessage(userEmail, messageReq);
   }
 
+  // write TC for this
   @PostMapping("/secure/respond/message")
   public void responseMessage (@RequestBody AdminQuestionRequest adminQuestionRequest) throws Exception{
     String userEmail = "admin@test.com";
 
     // Admin check post authorization impl
+
 
     messageService.respondMessage(userEmail, adminQuestionRequest);
   }
