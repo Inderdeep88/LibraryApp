@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "a1f4f214-44f3-4878-86ad-909a8372ea0d",
+		"name": "LibraryAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32737850"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "api/books/secure/ischeckedout/byuser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIzMjE=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/books/secure/ischeckedout/byuser?bookId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books",
+								"secure",
+								"ischeckedout",
+								"byuser"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/books/secure/currentloans/count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIzMjE=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/books/secure/currentloans/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books",
+								"secure",
+								"currentloans",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/books/secure/checkout",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIzMjE=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/books/secure/checkout?bookId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books",
+								"secure",
+								"checkout"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/books/secure/return",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIzMjE=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/books/secure/return?bookId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books",
+								"secure",
+								"return"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/books/secure/renew/loan",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIzMjE=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/books/secure/renew/loan?bookId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books",
+								"secure",
+								"renew",
+								"loan"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/books/ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/books/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "api/admin/secure/add/book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "YWRtaW5hZG1pbkAxMjMyMQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Da Vinci Code2\",\n    \"author\":\"Dan Brown\",\n    \"description\":\"Symbolist guys adventure 2.\",\n    \"copies\":7,\n    \"category\":\"Fiction\",\n    \"img\":\"http://imageURL3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/admin/secure/add/book",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"admin",
+								"secure",
+								"add",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/admin/secure/remove/book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "YWRtaW5hZG1pbkAxMjMyMQ==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/admin/secure/remove/book?bookId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"admin",
+								"secure",
+								"remove",
+								"book"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/admin/secure/increase/book/qty",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/admin/secure/increase/book/qty?bookId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"admin",
+								"secure",
+								"increase",
+								"book",
+								"qty"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/admin/secure/decrease/book/qty",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/admin/secure/increase/book/qty?bookId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"admin",
+								"secure",
+								"increase",
+								"book",
+								"qty"
+							],
+							"query": [
+								{
+									"key": "bookId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "api/messages/secure/add/message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIzMjE=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Extension details\",\n    \"question\":\"How to extend the book loan?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/messages/secure/add/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"messages",
+								"secure",
+								"add",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/messages/secure/respond/message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "YWRtaW5hZG1pbkAxMjM=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"response\":\"Use renew loan API.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/messages/secure/respond/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"messages",
+								"secure",
+								"respond",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "YWRtaW5hZG1pbkAxMjM=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/messages/ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/messages/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "api/reviews/secure/add/review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "isingh",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "aXNpbmdocGFzc3dvcmRAMTIz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookId\":\"3\",\n    \"rating\":4,\n    \"reviewDescription\":\"Must Read !!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/reviews/secure/add/review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"reviews",
+								"secure",
+								"add",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "api/user/secure/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"isingh\",\n    \"password\":\"password@123\",\n    \"email\":\"isingh@lib.com\",\n    \"first_name\":\"Inderdeep\",\n    \"last_name\":\"Singh\",\n    \"is_admin_user\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/user/secure/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user",
+								"secure",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/user/secure/generateToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/user/secure/generateToken?username=admin&password=newpass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user",
+								"secure",
+								"generateToken"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "admin"
+								},
+								{
+									"key": "password",
+									"value": "newpass"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"isingh\",\n    \"password\":\"password@123\",\n    \"email\":\"isingh@lib.com\",\n    \"first_name\":\"Inderdeep\",\n    \"last_name\":\"Singh\",\n    \"is_admin_user\":false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
