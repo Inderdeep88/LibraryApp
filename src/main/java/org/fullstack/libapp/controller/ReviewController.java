@@ -5,26 +5,31 @@ import org.fullstack.libapp.requestmodels.AddReviewRequest;
 import org.fullstack.libapp.requestmodels.AdminQuestionRequest;
 import org.fullstack.libapp.service.MessageService;
 import org.fullstack.libapp.service.ReviewService;
+import org.fullstack.libapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/reviews")
 public class ReviewController {
 
   private ReviewService reviewService;
+  private UserService userService;
 
   @Autowired
-  public ReviewController(ReviewService reviewService){
+  public ReviewController(ReviewService reviewService, UserService userService){
+    this.userService =  userService;
     this.reviewService = reviewService;
   }
 
   @PostMapping("/secure/add/review")
-  public void addReview (@RequestBody AddReviewRequest addReviewRequest) throws Exception{
-    String userEmail = "test@test.com";
+  public void addReview (@RequestBody AddReviewRequest addReviewRequest,
+                         @RequestHeader Map<String, String> headers) throws Exception{
+
+    userService.authenticateUser(headers);
+    String userEmail = userService.getDetail(headers.get("username")).getEmail();
     reviewService.postReview(userEmail, addReviewRequest);
   }
 

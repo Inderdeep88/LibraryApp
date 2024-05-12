@@ -66,7 +66,7 @@ public class AdminService {
     }
 
     book.get().setCopies(book.get().getCopies() - 1);
-    book.get().setCopiesAvailable(book.get().getCopies() - 1);
+    book.get().setCopiesAvailable(book.get().getCopiesAvailable() - 1);
 
     bookRepository.save(book.get());
   }
